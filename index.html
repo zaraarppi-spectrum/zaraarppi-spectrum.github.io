@@ -564,32 +564,82 @@ section {
         );
 }
 
-.video-box {
-    width: 100%;
+/* =====================================================
+   PREMIUM AI VIDEO
+   ===================================================== */
 
+.video-section {
+    position: relative;
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(100,29,42,.16),
+            transparent 45%
+        ),
+        linear-gradient(
+            180deg,
+            #070707 0%,
+            #0b0809 100%
+        );
+}
+
+.video-section::before {
+    content: "";
+    position: absolute;
+    left: 7%;
+    right: 7%;
+    top: 70px;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(214,173,82,.35),
+        transparent
+    );
+}
+
+.video-box {
+    position: relative;
+
+    width: 100%;
     max-width: 1000px;
 
-    margin: auto;
+    margin: 0 auto;
 
     background: #050505;
 
-    border: 1px solid var(--line);
-
-    overflow: hidden;
+    border: 1px solid rgba(214,173,82,.55);
 
     box-shadow:
-        0 20px 70px rgba(0,0,0,.6);
+        0 0 0 1px rgba(100,29,42,.25),
+        0 25px 80px rgba(0,0,0,.75),
+        0 0 45px rgba(100,29,42,.16);
+
+    overflow: hidden;
 }
 
+
+/* VIDEO FRAME */
+
 .drive-video {
+    position: relative;
+
     width: 100%;
 
     aspect-ratio: 16 / 9;
 
-    background: #000;
+    background:
+        radial-gradient(
+            circle,
+            #202020,
+            #000 75%
+        );
 
-    position: relative;
+    overflow: hidden;
 }
+
+
+/* GOOGLE DRIVE PLAYER */
 
 .drive-video iframe {
     position: absolute;
@@ -600,31 +650,147 @@ section {
     height: 100%;
 
     border: 0;
+
+    /*
+       Membuat video lebih terang,
+       lebih kontras dan lebih hidup.
+    */
+
+    filter:
+        brightness(1.22)
+        contrast(1.10)
+        saturate(1.12);
+
+    transform: scale(1.002);
 }
 
-.video-caption {
-    padding: 25px 28px;
 
-    border-top: 1px solid var(--line);
+/* GARIS GOLD DI BAWAH VIDEO */
+
+.video-caption {
+    position: relative;
+
+    padding: 26px 28px 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d0d0d,
+            #080808
+        );
+
+    border-top: 1px solid rgba(214,173,82,.35);
 
     display: flex;
 
     flex-direction: column;
 
-    gap: 6px;
+    gap: 8px;
 }
 
-.video-caption strong {
-    font-family: Georgia, serif;
 
-    font-size: 27px;
+/* ORNAMEN KECIL */
+
+.video-caption::before {
+    content: "FILM 01";
+
+    position: absolute;
+
+    top: 16px;
+    right: 22px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #641d2a;
+}
+
+
+/* JUDUL FILM */
+
+.video-caption strong {
+    display: block;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(22px, 4vw, 32px);
+
+    line-height: 1.15;
 
     letter-spacing: 2px;
 
-    color: var(--gold);
+    color: #d6ad52;
+
+    text-shadow:
+        0 0 18px rgba(214,173,82,.12);
 }
 
+
+/* SUBTITLE */
+
 .video-caption small {
+    display: block;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #aaa49d;
+
+    text-transform: uppercase;
+}
+
+
+/* LABEL */
+
+.video-caption small::before {
+    content: "◆  ";
+
+    color: #641d2a;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .video-box {
+        width: 100%;
+
+        border-color:
+            rgba(214,173,82,.45);
+    }
+
+    .drive-video {
+        aspect-ratio: 16 / 9;
+    }
+
+    .drive-video iframe {
+        filter:
+            brightness(1.20)
+            contrast(1.10)
+            saturate(1.10);
+    }
+
+    .video-caption {
+        padding:
+            22px 18px 24px;
+    }
+
+    .video-caption strong {
+        font-size: 22px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .video-caption small {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+      } {
     font-size: 11px;
 
     letter-spacing: 3px;
