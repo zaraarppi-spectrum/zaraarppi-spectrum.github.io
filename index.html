@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zara Arpi | AI Creator & Mentor</title>
+
+<meta name="description"
+content="Zara Arpi — AI Creator & Mentor Spectrum Academy dari Lamongan, Indonesia.">
+
+<style>
+
+/* =========================================================
+   ZARA ARPI PORTFOLIO
+   BLACK • GOLD • MAROON • ELEGANT BATIK
+   ========================================================= */
+
+:root {
+    --black: #070707;
+    --black-soft: #101010;
+    --gold: #d6ad52;
+    --gold-light: #f1d58a;
+    --maroon: #641d2a;
+    --maroon-dark: #321018;
+    --white: #f8f5ef;
+    --gray: #aaa49d;
+    --line: rgba(214,173,82,.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--black);
+    color: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   BATIK BACKGROUND
+   ========================================================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -2;
+
+    background:
+        radial-gradient(circle at 20% 20%,
+            rgba(214,173,82,.08) 0 2px,
+            transparent 3px),
+        radial-gradient(circle at 80% 70%,
+            rgba(100,29,42,.12) 0 3px,
+            transparent 4px);
+
+    background-size: 35px 35px, 50px 50px;
+    opacity: .65;
+}
+
+/* Ornamen batik elegan */
+
+.batik-pattern {
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    border: 1px solid rgba(214,173,82,.18);
+    border-radius: 50%;
+    opacity: .35;
+    pointer-events: none;
+}
+
+.batik-pattern::before,
+.batik-pattern::after {
+    content: "";
+    position: absolute;
+    inset: 30px;
+    border: 1px solid rgba(214,173,82,.16);
+    transform: rotate(45deg);
+}
+
+.batik-pattern::after {
+    transform: rotate(22.5deg);
+}
+
+.batik-one {
+    top: 90px;
+    right: -140px;
+}
+
+.batik-two {
+    top: 520px;
+    left: -180px;
+    transform: scale(.75);
+}
+
+.batik-three {
+    bottom: 100px;
+    right: -170px;
+    transform: scale(.8);
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    padding: 20px 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(7,7,7,.88);
+    backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid var(--line);
+}
+
+.logo {
+    color: var(--gold-light);
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.logo span {
+    color: var(--maroon);
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: #d5d0c8;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+
+.menu a:hover {
+    color: var(--gold-light);
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    min-height: 100vh;
+    padding: 150px 8% 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 75% 35%,
+            rgba(100,29,42,.28),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 20% 70%,
+            rgba(214,173,82,.08),
+            transparent 30%
+        );
+}
+
+.hero-line {
+    width: 70px;
+    height: 2px;
+    background: var(--gold);
+    margin-bottom: 25px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(64px, 18vw, 150px);
+    line-height: .85;
+    letter-spacing: -5px;
+    text-transform: uppercase;
+}
+
+.hero h1 span {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--gold);
+}
+
+.hero-subtitle {
+    margin-top: 40px;
+    color: #d1ccc5;
+    font-size: 15px;
+    letter-spacing: 4px;
+    max-width: 500px;
+}
+
+.hero-subtitle strong {
+    color: var(--gold-light);
+}
+
+.location {
+    margin-top: 18px;
+    color: var(--gray);
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 45px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+
+    transition: .35s;
+}
+
+.btn:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.btn-maroon {
+    border-color: var(--maroon);
+    color: #e8c8ca;
+}
+
+.btn-maroon:hover {
+    background: var(--maroon);
+    color: white;
+}
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.profile-wrap {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.profile-photo {
+    width: 125px;
+    height: 125px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 2px solid var(--gold);
+
+    padding: 5px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold),
+            var(--maroon)
+        );
+
+    box-shadow:
+        0 0 30px rgba(214,173,82,.15);
+}
+
+.profile-text {
+    color: var(--gray);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.profile-text strong {
+    color: var(--gold-light);
+}
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+section {
+    padding: 110px 8%;
+    position: relative;
+}
+
+.section-number {
+    color: var(--maroon);
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 10vw, 80px);
+    line-height: 1;
+    margin-bottom: 45px;
+}
+
+.section-title span {
+    color: var(--gold);
+}
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(100,29,42,.12),
+            transparent 40%
+        );
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.about-text {
+    color: #c0bbb4;
+    font-size: 16px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.about-card {
+    border: 1px solid var(--line);
+    padding: 30px;
+
+    background: rgba(255,255,255,.015);
+}
+
+.about-card div {
+    padding: 17px 0;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.about-card div:last-child {
+    border-bottom: none;
+}
+
+.about-card small {
+    color: var(--gray);
+    display: block;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+}
+
+.about-card strong {
+    color: var(--gold-light);
+}
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.skill {
+    padding: 30px 20px;
+    min-height: 150px;
+
+    border: 1px solid rgba(214,173,82,.18);
+
+    position: relative;
+    overflow: hidden;
+
+    transition: .35s;
+}
+
+.skill::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: -30px;
+    bottom: -30px;
+
+    border-radius: 50%;
+
+    background: var(--maroon);
+    opacity: .2;
+}
+
+.skill:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+}
+
+.skill-number {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.skill h3 {
+    margin-top: 25px;
+    font-family: Georgia, serif;
+    font-size: 21px;
+}
+
+/* =========================================================
+   PORTFOLIO
+   ========================================================= */
+
+.portfolio {
+    background: #090909;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project {
+    min-height: 300px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    border: 1px solid rgba(214,173,82,.15);
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(100,29,42,.6),
+            rgba(0,0,0,.95)
+        );
+
+    transition: .4s;
+}
+
+.project::before {
+    content: "ZARA ARPI";
+    position: absolute;
+    top: 25px;
+    right: -25px;
+
+    color: rgba(214,173,82,.12);
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 5px;
+
+    transform: rotate(90deg);
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+}
+
+.project-number {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.project h3 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.project p {
+    color: var(--gray);
+    font-size: 12px;
+}
+
+/* =========================================================
+   VIDEO
+   ========================================================= */
+
+.video-section {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(100,29,42,.18),
+            transparent 50%
+        );
+}
+
+.video-box {
+    border: 1px solid var(--line);
+    padding: 10px;
+    background: #030303;
+}
+
+.video-placeholder {
+    min-height: 280px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #180b0e,
+            #080808,
+            #1a1409
+        );
+}
+
+.video-placeholder div {
+    color: var(--gold);
+}
+
+.play {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact {
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(100,29,42,.22),
+            transparent
+        );
+}
+
+.contact .section-title {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-text {
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto 35px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.contact-link {
+    display: inline-block;
+    padding: 15px 22px;
+
+    border: 1px solid rgba(214,173,82,.45);
+
+    color: var(--gold-light);
+
+    text-decoration: none;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    transition: .3s;
+}
+
+.contact-link:hover {
+    background: var(--gold);
+    color: black;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    padding: 35px 8%;
+
+    border-top: 1px solid rgba(214,173,82,.15);
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+footer strong {
+    color: var(--gold);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 15px;
+        letter-spacing: 3px;
+    }
+
+    .menu {
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .hero {
+        padding: 140px 7% 80px;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+        letter-spacing: -3px;
+    }
+
+    .hero-subtitle {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .profile-wrap {
+        align-items: flex-start;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    section {
+        padding: 85px 7%;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        min-height: 260px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .menu {
+        gap: 7px;
+    }
+
+    .menu a {
+        font-size: 8px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-wrap {
+        flex-direction: column;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- BATIK ORNAMENT -->
+<div class="batik-pattern batik-one"></div>
+<div class="batik-pattern batik-two"></div>
+<div class="batik-pattern batik-three"></div>
+
+<!-- ======================================================
+     NAVIGATION
+     ====================================================== -->
+
+<nav>
+
+    <div class="logo">
+        ZARA <span>ARPI</span>
+    </div>
+
+    <div class="menu">
+        <a href="#about">ABOUT</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#portfolio">WORK</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+
+</nav>
+
+
+<!-- ======================================================
+     HERO
+     ====================================================== -->
+
+<section class="hero">
+
+    <div class="hero-line"></div>
+
+    <div class="eyebrow">
+        AI CREATOR • MENTOR
+    </div>
+
+    <h1>
+        ZARA<br>
+        <span>ARPI</span>
+    </h1>
+
+    <div class="hero-subtitle">
+        <strong>AI CREATOR</strong><br>
+        MENTOR — SPECTRUM ACADEMY
+    </div>
+
+    <div class="location">
+        LAMONGAN — INDONESIA
+    </div>
+
+    <div class="profile-wrap">
+
+        <img
+            src="profile.png"
+            alt="Zara Arpi"
+            class="profile-photo"
+        >
+
+        <div class="profile-text">
+            CREATIVE MIND<br>
+            <strong>AI • VISUAL • DIGITAL</strong>
+        </div>
+
+    </div>
+
+    <div class="hero-buttons">
+
+        <a href="#portfolio" class="btn">
+            EXPLORE MY WORK →
+        </a>
+
+        <a href="#contact" class="btn btn-maroon">
+            LET'S CONNECT
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     ABOUT
+     ====================================================== -->
+
+<section class="about" id="about">
+
+    <div class="section-number">
+        01 — ABOUT
+    </div>
+
+    <h2 class="section-title">
+        CREATIVE<br>
+        <span>IDENTITY</span>
+    </h2>
+
+    <div class="about-grid">
+
+        <div class="about-text">
+
+            <p>
+                Saya <strong>Zara Arpi</strong>, seorang Kreator AI
+                yang mengeksplorasi perpaduan antara teknologi,
+                visual, imajinasi dan storytelling.
+            </p>
+
+            <p>
+                Sebagai Mentor di Spectrum Academy, saya berbagi
+                pengetahuan dan pengalaman dalam dunia kreativitas
+                berbasis Artificial Intelligence.
+            </p>
+
+            <p>
+                Saya percaya bahwa AI bukan sekadar teknologi,
+                tetapi sebuah medium baru untuk menciptakan
+                karya visual yang memiliki karakter, cerita
+                dan identitas.
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <div>
+                <small>NAME</small>
+                <strong>Zara Arpi</strong>
+            </div>
+
+            <div>
+                <small>ROLE</small>
+                <strong>AI Creator</strong>
+            </div>
+
+            <div>
+                <small>MENTOR</small>
+                <strong>Spectrum Academy</strong>
+            </div>
+
+            <div>
+                <small>LOCATION</small>
+                <strong>Lamongan — Indonesia</strong>
+            </div>
+
+            <div>
+                <small>FOCUS</small>
+                <strong>AI • Visual • Creative</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     SKILLS
+     ====================================================== -->
+
+<section id="skills">
+
+    <div class="section-number">
+        02 — EXPERTISE
+    </div>
+
+    <h2 class="section-title">
+        CREATIVE<br>
+        <span>SKILLS</span>
+    </h2>
+
+    <div class="skills-grid">
+
+        <div class="skill">
+            <div class="skill-number">01</div>
+            <h3>AI IMAGE</h3>
+        </div>
+
+        <div class="skill">
+            <div class="skill-number">02</div>
+            <h3>AI VIDEO</h3>
+        </div>
+
+        <div class="skill">
+            <div class="skill-number">03</div>
+            <h3>PROMPT ENGINEERING</h3>
+        </div>
+
+        <div class="skill">
+            <div class="skill-number">04</div>
+            <h3>VISUAL DESIGN</h3>
+        </div>
+
+        <div class="skill">
+            <div class="skill-number">05</div>
+            <h3>STORYBOARD</h3>
+        </div>
+
+        <div class="skill">
+            <div class="skill-number">06</div>
+            <h3>CREATIVE DIRECTION</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     PORTFOLIO
+     ====================================================== -->
+
+<section class="portfolio" id="portfolio">
+
+    <div class="section-number">
+        03 — SELECTED WORK
+    </div>
+
+    <h2 class="section-title">
+        MY<br>
+        <span>PORTFOLIO</span>
+    </h2>
+
+    <div class="portfolio-grid">
+
+        <article class="project">
+
+            <div class="project-number">
+                PROJECT 01
+            </div>
+
+            <h3>AI VISUAL ART</h3>
+
+            <p>
+                Eksplorasi visual dan artwork
+                menggunakan teknologi AI.
+            </p>
+
+        </article>
+
+
+        <article class="project">
+
+            <div class="project-number">
+                PROJECT 02
+            </div>
+
+            <h3>AI VIDEO</h3>
+
+            <p>
+                Visual storytelling dan
+                cinematic AI video creation.
+            </p>
+
+        </article>
+
+
+        <article class="project">
+
+            <div class="project-number">
+                PROJECT 03
+            </div>
+
+            <h3>POSTER DESIGN</h3>
+
+            <p>
+                Creative campaign, poster
+                dan visual communication.
+            </p>
+
+        </article>
+
+
+        <article class="project">
+
+            <div class="project-number">
+                PROJECT 04
+            </div>
+
+            <h3>STORYBOARD</h3>
+
+            <p>
+                Pengembangan konsep visual,
+                scene dan storytelling.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     VIDEO
+     ====================================================== -->
+
+<section class="video-section">
+
+    <div class="section-number">
+        04 — MOTION
+    </div>
+
+    <h2 class="section-title">
+        AI<br>
+        <span>VIDEO</span>
+    </h2>
+
+    <div class="video-box">
+
+        <div class="video-placeholder">
+
+            <div>
+
+                <div class="play">
+                    ▶
+                </div>
+
+                <strong>
+                    ZARA ARPI
+                </strong>
+
+                <br>
+
+                <small>
+                    AI VIDEO SHOWCASE
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     CONTACT
+     ====================================================== -->
+
+<section class="contact" id="contact">
+
+    <div class="section-number">
+        05 — CONTACT
+    </div>
+
+    <h2 class="section-title">
+        LET'S CREATE<br>
+        <span>SOMETHING EPIC.</span>
+    </h2>
+
+    <p class="contact-text">
+        Punya ide, project, kolaborasi atau ingin belajar
+        kreativitas AI? Mari terhubung dengan Zara Arpi.
+    </
